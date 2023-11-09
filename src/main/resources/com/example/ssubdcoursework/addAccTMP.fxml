@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="243.0" prefWidth="533.0" style="-fx-background-color: #00A8DC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ssubdcoursework.AddAccountController">
+   <children>
+      <GridPane alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT" VBox.vgrow="SOMETIMES">
+         <children>
+            <Label fx:id="amountLB" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" text="Назва рахунку" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="amountLB1" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" text="Тип рахунку" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font name="SansSerif Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="amountLB2" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" text="Початковий баланс" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="SansSerif Bold" size="23.0" />
+               </font>
+            </Label>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <ComboBox maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <TextField GridPane.columnIndex="1">
+               <font>
+                  <Font name="SansSerif" size="23.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <ComboBox fx:id="currenciesCB" prefHeight="42.0" prefWidth="99.0" style="-fx-background-color: #00A8DC;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </ComboBox>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="NEVER" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <HBox />
+      <HBox />
+      <HBox />
+      <HBox />
+      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#applyBtn" onMouseEntered="#changeColorEnterL" onMouseExited="#changeColorDark" onMousePressed="#changeColourExtraDark" onMouseReleased="#changeColourReleasedL" prefHeight="42.0" style="-fx-background-color: #01799a;" text="Підтвердити" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="23.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

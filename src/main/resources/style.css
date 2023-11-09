@@ -1,0 +1,171 @@
+.tabLabel{
+    -fx-text-fill: #9ADCEE;
+}
+
+.pie-chart{
+    -fx-pie-label-visible: false;
+    -fx-legend-visible: false;
+    -fx-background-color: transparent;
+
+}
+
+.separator .line{
+    -fx-background-color: #01799a;
+    -fx-pref-height: 4;
+    -fx-border-width: 2;
+    -fx-border-color: #01799a;
+}
+
+.scroll-pane > .viewport  {
+    -fx-background-color: #00A8DC;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.account-btn{
+    -fx-margin-bottom: 10px
+}
+
+
+
+
+.time-periodCB{
+    -fx-background-color: #01799a;
+}
+
+.time-periodCB .list-view .list-cell {
+    -fx-text-fill: white;
+}
+
+.default-color0.chart-bar { -fx-bar-fill: #3cdd3c }
+.default-color1.chart-bar { -fx-bar-fill: #ff3e3e }
+
+.time-periodCB .list-cell {
+    -fx-text-alignment: Center;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-font-family: 'SansSerif';
+    /*-fx-alignment: center;*/
+}
+
+.time-periodCB .list-view .list-cell {
+    -fx-text-fill: black;
+}
+
+.time-periodCB .list-view .list-cell:focused {
+    -fx-background-color: #008db8;
+    -fx-text-fill: white;
+}
+
+.time-periodCB .list-view .list-cell:hover {
+    -fx-background-color: #008db8;
+    -fx-text-fill: white;
+}
+
+.time-periodCB:hover{
+    -fx-background-color: #008db8;
+}
+
+.time-periodCB:armed{
+    -fx-background-color: #006278;
+}
+
+
+.account-btn{
+    -fx-background-color: #01799a;
+}
+.account-btn:hover{
+    -fx-background-color: #008db8;
+}
+.account-btn:armed{
+    -fx-background-color: #006278;
+}
+
+
+
+.split-converter .split-pane-divider{
+    -fx-background-color: transparent;
+}
+
+.circle-chart{
+    -fx-min-width: 100px;
+    -fx-min-height: 100px;
+    -fx-border-color: transparent;
+}
+
+.tab-Pane1 .tab-header-area .tab-header-background{
+    -fx-background-color: #00A8DC;
+    -fx-border-color: #009CCD;
+    -fx-border-width: 2;
+}
+.tab-Pane1 .tab:selected .tabLabel{
+    -fx-text-fill: #000000;
+}
+
+.tab-Pane1 .tab-label {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14pt;
+    -fx-text-fill: #9ADCEE;
+}
+
+.tab-Pane1 .tab:selected .tab-label {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14pt;
+    -fx-text-fill: #000000;
+}
+
+.tab-Pane1 .tab{
+    -fx-border-color: transparent;
+    -fx-background-color: #009CCD;
+}
+
+.tab-Pane1 .tab:selected{
+    -fx-background-color: #FFFFFF;
+}
+
+.vBoxAdd_1{
+    -fx-background-color: #009CCD;
+}
+
+.hBoxTab_1{
+    -fx-background-color: #00A8DC;
+}
+
+.tableDB{
+    -fx-font-size: 15px;
+}
+
+.tableViewDB{
+    -fx-font-size: 13px;
+}
+
+.cb-view-style{
+    -fx-pref-width: 230px;
+
+}
+
+.myLbl-style{
+    -fx-font-family: Calibri;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 5,0,0,0;
+}
+.text-field-view {
+    -fx-pref-width: 230px;
+    -fx-max-width: 230px;
+}
+
+.my-grid-pane{
+    -fx-pref-height: 35px;
+}
+
+.my-scroll-pane > .viewport{
+    -fx-background-color: transparent;
+}
+.my-scroll-pane{
+    -fx-background-color: transparent;
+}

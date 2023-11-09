@@ -1,0 +1,51 @@
+.time-periodCB{
+    -fx-background-color: #01799a;
+}
+
+.time-periodCB .list-view .list-cell {
+    -fx-text-fill: white;
+}
+
+.default-color0.chart-bar { -fx-bar-fill: #3cdd3c }
+.default-color1.chart-bar { -fx-bar-fill: #ff3e3e }
+
+.time-periodCB .list-cell {
+    -fx-text-alignment: Center;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-font-family: 'SansSerif';
+    /*-fx-alignment: center;*/
+}
+
+.time-periodCB .list-view .list-cell {
+    -fx-text-fill: black;
+}
+
+.time-periodCB .list-view .list-cell:focused {
+    -fx-background-color : #008db8;
+    -fx-text-fill: white;
+}
+
+.time-periodCB .list-view .list-cell:hover {
+    -fx-background-color : #008db8;
+    -fx-text-fill: white;
+}
+
+.time-periodCB:hover{
+    -fx-background-color : #008db8;
+}
+
+.time-periodCB:armed{
+    -fx-background-color : #006278;
+}
+
+.account-btn{
+    -fx-background-color: #01799a;
+}
+.account-btn:hover{
+    -fx-background-color: #008db8;
+}
+.account-btn:armed{
+    -fx-background-color: #006278;
+}
