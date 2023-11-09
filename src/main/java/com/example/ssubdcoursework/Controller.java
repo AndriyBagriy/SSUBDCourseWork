@@ -53,7 +53,6 @@ import static java.lang.Long.MAX_VALUE;
 public class Controller implements Initializable {
 
     public Button nextBtn;
-    String[] currencies ={"Сполучені штати, Доллар, USD, $", "Об'єднані Арабські Емірати, Дирхам, AED, د.إ", "Афганістан, Афгані, AFN, ؋", "Албанія, Лек, ALL, L", "Вірменія, Драм, AMD, ֏", "Нідерландські Антильські острови, Гульден, ANG, ƒ", "Ангола, Кванза, AOA, Kz", "Аргентина, Песо, ARS, $", "Австралія, Доллар, AUD, $", "Аруба, Флорин, AWG, ƒ", "Азербайджан, Манат, AZN, ₼", "Боснія і Герцеговина, Марка, BAM, КМ", "Барбадос, Доллар, BBD, $", "Бангладеш, Така, BDT, ৳", "Болгарія, Лев, BGN, лв", "Бахрейн, Динар, BHD, د.ب.", "Бурунді, Франк, BIF, FBu", "Бермуди, Доллар, BMD, $", "Бруней, Доллар, BND, $", "Болівія, Болівіано, BOB, Bs.", "Бразилія, Реал, BRL, R$", "Багами, Доллар, BSD, $", "Бутан, Нгултрум, BTN, Nu.", "Ботсвана, Пула, BWP, P", "Білорусь, Білоруський рубль, BYN, Br", "Беліз, Доллар, BZD, BZ$", "Канада, Доллар, CAD, $", "Демократична Республіка Конго, Франк, CDF, FC", "Швейцарія, Франк, CHF, CHF", "Чилі, Песо, CLP, $", "Китай, Юань, CNY, ¥", "Колумбія, Песо, COP, $", "Коста-Рика, Колон, CRC, ₡", "Куба, Песо, CUP, ₱", "Кабо-Верде, Ескудо, CVE, $", "Чеська Республіка, Коруна, CZK, Kč", "Джибуті, Франк, DJF, Fdj", "Данія, Крона, DKK, kr", "Домініканська Республіка, Песо, DOP, RD$", "Алжир, Динар, DZD, دج", "Єгипет, Фунт, EGP, ج.م", "Еритрея, Накфа, ERN, Nfk", "Ефіопія, Бирр, ETB, Br", "Єврозона, Євро, EUR, €", "Фіджі, Доллар, FJD, FJ$", "Фолклендські острови, Фунт, FKP, £", "Фарерські острови, Данська крона, FOK, kr", "Велика Британія, Фунт, GBP, £", "Грузія, Ларі, GEL, ₾", "Гернсі, Фунт, GGP, £", "Гана, Седі, GHS, GH₵", "Гібралтар, Фунт, GIP, £", "Гамбія, Даласі, GMD, D", "Гвінея, Франк, GNF, FG", "Гватемала, Кетсаль, GTQ, Q", "Гайана, Доллар, GYD, $", "Гонконг, Доллар, HKD, HK$", "Гондурас, Лемпіра, HNL, L", "Хорватія, Куна, HRK, kn", "Гаїті, Гурд, HTG, G", "Угорщина, Форинт, HUF, Ft", "Індонезія, Рупія, IDR, Rp", "Ізраїль, Шекель, ILS, ₪", "Острів Мен, Фунт, IMP, £", "Індія, Рупія, INR, ₹", "Ірак, Динар, IQD, ع.د", "Іран, Ріал, IRR, ریال", "Ісландія, Крона, ISK, kr", "Джерсі, Фунт, JEP, £", "Ямайка, Доллар, JMD, J$", "Йорданія, Динар, JOD, د.ا", "Японія, Єна, JPY, ¥", "Кенія, Шилінг, KES, KSh", "Киргизстан, Сом, KGS, сом", "Камбоджа, Рієль, KHR, ៛", "Кірібаті, Доллар, KID, $", "Коморські острови, Франк, KMF, CF", "Південна Корея, Вона, KRW, ₩", "Кувейт, Динар, KWD, د.ك", "Кайманові острови, Доллар, KYD, $", "Казахстан, Теньге, KZT, ₸", "Лаос, Кіп, LAK, ₭", "Ліван, Фунт, LBP, ل.ل", "Шрі-Ланка, Рупія, LKR, රු", "Ліберія, Доллар, LRD, $", "Лесото, Лоті, LSL, L", "Лівія, Динар, LYD, ل.د", "Марокко, Дирхам, MAD, د.م.", "Молдова, Лей, MDL, L", "Мадагаскар, Аріарі, MGA, Ar", "Македонія, Денар, MKD, ден", "М'янма, К'ят, MMK, Ks", "Монголія, Тугрик, MNT, ₮", "Макао, Патака, MOP, MOP$", "Мавританія, Угія, MRU, UM", "Маврикій, Рупія, MUR, ₨", "Мальдіви, Руфія, MVR, ރ.", "Малаві, Квача, MWK, MK", "Мексика, Песо, MXN, $", "Малайзія, Ринггіт, MYR, RM", "Мозамбік, Метикал, MZN, MT", "Намібія, Доллар, NAD, $", "Нігерія, Найра, NGN, ₦", "Нікарагуа, Кордоба, NIO, C$", "Норвегія, Крона, NOK, kr", "Непал, Рупія, NPR, रू", "Нова Зеландія, Доллар, NZD, $", "Оман, Ріал, OMR, ر.ع.", "Панама, Бальбоа, PAB, B/.", "Перу, Соль, PEN, S/.", "Папуа-Нова Гвінея, Кіна, PGK, K", "Філіппіни, Песо, PHP, ₱", "Пакистан, Рупія, PKR, ₨", "Польща, Злотий, PLN, zł", "Парагвай, Гуарані, PYG, ₲", "Катар, Ріяль, QAR, ر.ق", "Румунія, Лей, RON, lei", "Сербія, Динар, RSD, дин.", "Росія, Російський рубль, RUB, ₽", "Руанда, Франк, RWF, FRw", "Саудівська Аравія, Ріяль, SAR, ر.س", "Соломонові острови, Доллар, SBD, SI$", "Сейшельські острови, Рупія, SCR, ₨", "Судан, Фунт, SDG, ج.س.", "Швеція, Крона, SEK, kr", "Сінгапур, Доллар, SGD, S$", "Святої Єлени, Фунт, SHP, £", "Сьєрра-Леоне, Леоне, SLE, Le", "Сьєрра-Леоне, Леоне, SLL, Le", "Сомалі, Шилінг, SOS, Sh", "Суринам, Доллар, SRD, $", "Південний Судан, Фунт, SSP, £", "Сан-Томе і Прінсіпі, Добра, STN, Db", "Сирія, Фунт, SYP, ل.س", "Свазіленд, Лілангені, SZL, E", "Таїланд, Бат, THB, ฿", "Таджикистан, Сомоні, TJS, ЅМ", "Туркменістан, Манат, TMT, T", "Туніс, Динар, TND, د.ت", "Тонга, Паанга, TOP, T$", "Туреччина, Ліра, TRY, ₺", "Тринідад і Тобаго, Доллар, TTD, TT$", "Тувалу, Доллар, TVD, $", "Тайвань, Доллар, TWD, NT$", "Танзанія, Шилінг, TZS, TSh", "Україна, Гривня, UAH, ₴", "Уганда, Шилінг, UGX, USh", "Уругвай, Песо, UYU, $", "Узбекистан, Сум, UZS, сўм", "Венесуела, Болівар, VES, Bs.", "В'єтнам, Донг, VND, ₫", "Вануату, Вату, VUV, VT", "Самоа, Тала, WST, WS$", "Центральноафриканська Республіка, Франк, XAF, FCFA", "Східно-карибський доллар, Доллар, XCD, EC$", "Спеціальні права запозичення, СПЗ, XDR, XDR", "Західноафриканський франк, Франк, XOF, CFA", "Французький тихоокеанський франк, Франк, XPF, CFP", "Ємен, Ріал, YER, ﷼", "Південна Африка, Ренд, ZAR, R", "Замбія, Квача, ZMW, ZK", "Зімбабве, Доллар, ZWL, Z$"};
     private final DBHelperSLite dbHelperSLite = new DBHelperSLite();
     private final DatabaseHelperPG dbHelperPG = new DatabaseHelperPG();
 
@@ -74,10 +73,8 @@ public class Controller implements Initializable {
     public ProgressBar incomePB, expensesPB;
     private Text centerText;
     public BarChart<String, Number> barChart;
-    public AreaChart<String, Number> areaChart;
     public XYChart.Series<String, Number> barChartSeriesInput = new XYChart.Series<>();
     public XYChart.Series<String, Number> barChartSeriesOutput = new XYChart.Series<>();
-    public XYChart.Series<String, Number> areaChartSeries = new XYChart.Series<>();
     boolean checkPoint = false;
 
     private static final String[] colors = {
@@ -85,7 +82,7 @@ public class Controller implements Initializable {
             "#FFFFFF", "#800000", "#008000", "#000080", "#808000", "#800080", "#008080", "#C00000",
             "#00C000", "#0000C0", "#C0C000", "#C000C0", "#00C0C0", "#C0C0C0", "#400000", "#004000",
             "#000040","#404000", "#400040", "#004040", "#404040", };
-    private static  final String[] timePeriodArray = {"Поточний рік", "Поточний місяць", "Поточний тиждень", "Поточний день"};
+    private static  final String[] timePeriodArray = {"Поточний рік", "Поточний місяць", "Поточний тиждень"};
     Locale ukLocale = new Locale("uk");
     String currentPeriod = "";
     @Override
@@ -127,16 +124,12 @@ public class Controller implements Initializable {
         } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
-
-       /*Image image = new Image(getClass().getResourceAsStream("/img/test.png"));
-        imgView.setImage(image);*/
-
         timePeriodsCB.getItems().addAll(timePeriodArray);
         timePeriodsCB.getStyleClass().add("time-periodCB");
         timePeriodsCB.valueProperty().addListener((observableValue, item, t1) -> {
            if(timePeriodsCB.getSelectionModel().getSelectedIndex()>=0) {
                 if(!observableValue.getValue().contains(".")) {
-                    if(timePeriodsCB.getItems().size()!=4){
+                    if(timePeriodsCB.getItems().size()!=3){
                         timePeriodsCB.getItems().remove(0);
                     }
                     currentPeriod = observableValue.getValue();
@@ -161,11 +154,8 @@ public class Controller implements Initializable {
             postgreSync();
             fillAccountsList();
             fillTransactionsList();
-            //periodInit();
             fillProgressBars("");
-            //createProgressBars("");
             initBarChart();
-            //initAreaChart();
             initChart();
             updateComboboxes();
         } catch (SQLException | ParseException e) {
@@ -503,33 +493,6 @@ public class Controller implements Initializable {
                 }
 
             }
-            case "Поточний день" -> {
-                String tempDay = String.format("%02d", dateTemp.getDayOfMonth());
-                query = " WHERE strftime('%Y', date) == '"+dateTemp.getYear()+"' AND strftime('%m', date) == '"+dateTemp.getMonthValue()+"' AND strftime('%d', date) == '"+tempDay+"'";
-                ObservableList<Transactions> transactions = dbHelperSLite.getTransactions(query);
-                for(int i = 1; i<=24; i++){
-                    String hourOfDay = i +".00";
-                    double sumInput = 0.0, sumOutput = 0.0;
-                    for(Transactions transaction : transactions){
-                        String categoryTypeStr = "";
-                        ResultSet categoryTypeRS = dbHelperSLite.executeQuery("SELECT type FROM Categories WHERE _id = " + transaction.getCategory_id());
-                        while (categoryTypeRS.next()) categoryTypeStr = categoryTypeRS.getString("type");
-                        Date date = transaction.getDate();
-                        calendar.setTime(date);
-                        int year = calendar.get(Calendar.YEAR);
-                        int month = calendar.get(Calendar.MONTH)+1;
-                        int day = calendar.get(Calendar.DAY_OF_MONTH);
-                        int hour = calendar.get(Calendar.HOUR_OF_DAY);
-                        double amount = getAmountCurrencies(transaction);
-                        if(year == dateTemp.getYear() && month == dateTemp.getMonthValue() && day == dateTemp.getDayOfMonth() && i == hour){
-                            if(categoryTypeStr.equals("input"))sumInput += amount;
-                            else sumOutput += amount;
-                        }
-                    }
-                    barChartSeriesInput.getData().add(new XYChart.Data<>(hourOfDay, sumInput));
-                    barChartSeriesOutput.getData().add(new XYChart.Data<>(hourOfDay, -sumOutput));
-                }
-            }
         }
         barChart.getData().addAll(barChartSeriesInput, barChartSeriesOutput);
     }
@@ -549,68 +512,6 @@ public class Controller implements Initializable {
         }
         return amount;
     }
-
-
-   /*public void initAreaChart() throws SQLException {
-        areaChartSeries.getData().clear();
-        areaChart.getData().clear();
-
-        ObservableList<Accounts> accounts = dbHelperSLite.getAccounts("");
-
-        LocalDate startOfWeek, endOfWeek;
-        startOfWeek = dateTemp;
-        while (startOfWeek.getDayOfWeek() != DayOfWeek.MONDAY) {
-            startOfWeek = startOfWeek.minusDays(1);
-        }
-        endOfWeek = startOfWeek.plusDays(6);
-        String query = "";
-
-        switch (currentPeriod) {
-            case "Поточний рік" -> {
-                for(int i = 1; i<=12; i++) {
-                    String monthName = Month.of(i).getDisplayName(TextStyle.FULL_STANDALONE, ukLocale);
-                    monthName = monthName.substring(0, 1).toUpperCase() + monthName.substring(1);
-
-                    String month = String.format("%02d", i);
-                    String currMonth = String.format("%02d", LocalDate.now().getMonthValue());
-                    query = " AND strftime('%Y', T.date) >= '"+dateTemp.getYear()+"' AND strftime('%m', T.date) >= '"+month+"' AND NOT (strftime('%Y', T.date) == '" + LocalDate.now().getYear() + "' AND  strftime('%m', T.date) == '"+currMonth+"')";
-
-                    double money = 0.0;
-                    List<Double> transactSum = getSumOfMoney(accounts, query);
-                    List<double[]> dataCurrencies = new ArrayList<>();
-                    for (int y = 0; y < transactSum.size(); y++) {
-                        double temp = accounts.get(y).getMoney() + transactSum.get(y);
-                        dataCurrencies.add(new double[]{temp, accounts.get(y).getCurrency_id()});
-                        money += temp;
-                    }
-                    areaChartSeries.getData().add(new XYChart.Data<>(monthName, money));
-                    Map<Integer, Double> result = new HashMap<>();
-                    for (double[] entry : dataCurrencies) {
-                        double a = entry[0];
-                        int b = (int) entry[1];
-                        result.put(b, result.getOrDefault(b, 0.0) + a);
-                    }
-                    double sumMoneyCurrency = 0.0;
-                    for (Map.Entry<Integer, Double> entry : result.entrySet()) {
-                        sumMoneyCurrency+=entry.getValue();
-                    }
-
-
-                }
-            }
-            case "Поточний місяць" -> {
-               // query = " AND NOT (strftime('%Y', T.date) == '"+year+"' AND strftime('%m', T.date) == '"+month+"')";
-            }
-            case "Поточний тиждень" -> {
-                //query = " AND NOT (strftime('%Y', T.date) == '"+startOfWeek.getYear()+"' AND strftime('%m', T.date) == '"+ startOfWeek.getMonth()+"' AND strftime('%d', T.date) == '"+startOfWeek.getDayOfMonth()+"')";
-            }
-            case "Поточний день" -> {
-                //query = " AND  NOT (strftime('%Y', T.date) == '"+year+"' AND strftime('%m', T.date) == '"+month+"' AND strftime('%d', T.date) == '"+day+"')";
-            }
-        }
-        areaChart.getData().add(areaChartSeries);
-    }*/
-
 
     private ArrayList<Double> getSumOfMoney(ObservableList<Accounts> accounts, String query) throws SQLException, IOException {
         ArrayList<Double> sumOfMoneyList = new ArrayList<>();
@@ -640,7 +541,7 @@ public class Controller implements Initializable {
     DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     LocalDate dateTemp;
     public void changePeriod(ActionEvent actionEvent) throws SQLException, IOException {
-        if(timePeriodsCB.getItems().size()!=4){
+        if(timePeriodsCB.getItems().size()!=3){
             String temp = String.valueOf(dateTemp);
             timePeriodsCB.getItems().remove(0);
             timePeriodsCB.getSelectionModel().select(temp);
@@ -667,8 +568,7 @@ public class Controller implements Initializable {
                     startOfWeek = endOfWeek.minusDays(6);
                     dateTemp = dateTemp.minusWeeks(1);
                 }
-            }
-            case "Поточний день" -> dateTemp = button.getId().equals("nextBtn") ? dateTemp.plusDays(1) : dateTemp.minusDays(1);
+            }           
         }
         if(currentPeriod.equals("Поточний тиждень")){
             String elemFirst = dateFormat.format(startOfWeek).replace("-", ".");
@@ -681,31 +581,7 @@ public class Controller implements Initializable {
             timePeriodsCB.setValue(elem);
         }
         periodInit();
-
-        /*String[] periodArr = dateFormat.format(dateTemp).split("-");
-        int month = Integer.parseInt(periodArr[1]);
-        int day = Integer.parseInt(periodArr[2]);
-
-        switch (currentPeriod) {
-            case "Поточний рік" -> {
-                createProgressBars(" AND strftime('%Y', T.date) >= '"+periodArr[0]+"'");
-                fillProgressBars(" AND strftime('%Y', T.date) = '"+periodArr[0]+"'");
-            }
-            case "Поточний місяць" -> {
-                createProgressBars(" AND strftime('%Y', T.date) >= '"+periodArr[0]+"' AND strftime('%m', T.date) >= '"+month+"'");
-                fillProgressBars(" AND strftime('%Y', T.date) = '"+periodArr[0]+"' AND strftime('%m', T.date) = '"+periodArr[1]+"'");
-            }
-            case "Поточний тиждень" -> {
-                createProgressBars(" AND T.date >= '"+dateFormat.format(startOfWeek)+"'");
-                fillProgressBars(" AND T.date BETWEEN '"+dateFormat.format(startOfWeek)+"' AND '"+dateFormat.format(endOfWeek)+"'");
-            }
-            case "Поточний день" -> {
-                createProgressBars(" AND strftime('%Y', T.date) >= '"+periodArr[0]+"' AND strftime('%m', T.date) >= '"+month+"' AND strftime('%d', T.date) >= '"+day+"'");
-                fillProgressBars(" AND strftime('%Y', T.date) = '"+periodArr[0]+"' AND strftime('%m', T.date) = '"+periodArr[1]+"' AND strftime('%d', T.date) = '"+periodArr[2]+"'");
-            }
-        }*/
         initBarChart();
-        //initAreaChart();
     }
     public void periodInit() throws SQLException, IOException {
         LocalDate startOfWeek, endOfWeek;
@@ -732,53 +608,14 @@ public class Controller implements Initializable {
                 createProgressBars(" AND T.date >= '"+dateFormat.format(startOfWeek)+"'");
                 fillProgressBars(" AND T.date BETWEEN '"+dateFormat.format(startOfWeek)+"' AND '"+dateFormat.format(endOfWeek)+"'");
             }
-            case "Поточний день" -> {
-                createProgressBars(" AND strftime('%Y', T.date) >= '"+periodArr[0]+"' AND strftime('%m', T.date) >= '"+month+"' AND strftime('%d', T.date) >= '"+day+"'");
-                fillProgressBars(" AND strftime('%Y', T.date) = '"+periodArr[0]+"' AND strftime('%m', T.date) = '"+periodArr[1]+"' AND strftime('%d', T.date) = '"+periodArr[2]+"'");
-            }
         }
     }
 
 
 
     public void fillProgressBars(String addQuery) throws SQLException, IOException {
-        /*String mainQueryExpenses = "SELECT SUM(amount) FROM Transactions T JOIN Categories C ON T.category_id = C._id WHERE C.type = 'output'";
-        String mainQueryIncome = "SELECT SUM(amount) FROM Transactions T JOIN Categories C ON T.category_id = C._id WHERE C.type = 'input'";
-        double sumExpenses = 0.0;
-        double sumIncome = 0.0;
-        ResultSet expensesRS = dbHelperSLite.executeQuery(mainQueryExpenses+addQuery);
-        ResultSet incomeRS = dbHelperSLite.executeQuery(mainQueryIncome+addQuery);
-        while (expensesRS.next()) sumExpenses = expensesRS.getDouble(1);
-        while (incomeRS.next()) sumIncome = incomeRS.getDouble(1);
-
-        double incomeProgress = (sumIncome == 0.0) ? 0.0F : (sumIncome / Math.max(sumExpenses, sumIncome));
-        double expensesProgress = (sumExpenses == 0.0) ? 0.0F : (sumExpenses / Math.max(sumIncome, sumExpenses));
-        incomePB.setProgress(incomeProgress);
-        expensesPB.setProgress(expensesProgress);*/
-
-        /*double sumExpenses = 0.0;
-        double sumIncome = 0.0;*/
         String mainQueryExpenses = "SELECT T.amount, C2.short_form FROM Transactions T JOIN Categories C ON T.category_id = C._id INNER JOIN Accounts A on T.account_id = A._id INNER JOIN Currencies C2 on A.currency_id = C2._id WHERE C.type = 'output'";
         String mainQueryIncome = "SELECT T.amount, C2.short_form FROM Transactions T JOIN Categories C ON T.category_id = C._id INNER JOIN Accounts A on T.account_id = A._id INNER JOIN Currencies C2 on A.currency_id = C2._id WHERE C.type = 'input'";
-        /*ResultSet expensesRS = dbHelperSLite.executeQuery(mainQueryExpenses+addQuery);
-        ResultSet incomeRS = dbHelperSLite.executeQuery(mainQueryIncome+addQuery);
-
-        while (expensesRS.next()) {
-            String shortFrom = expensesRS.getString(2);
-            double amountTmp = expensesRS.getDouble(1);
-            if(!shortFrom.equals("UAH")){
-                amountTmp = getExchangeRate(shortFrom, "UAH", amountTmp);
-            }
-            sumExpenses += amountTmp;
-        }
-        while (incomeRS.next()) {
-            String shortFrom = incomeRS.getString(2);
-            double amountTmp = incomeRS.getDouble(1);
-            if(!shortFrom.equals("UAH")){
-                amountTmp = getExchangeRate(shortFrom, "UAH", amountTmp);
-            }
-            sumIncome += amountTmp;
-        }*/
         double sumExpenses = getSumOfTransaction(mainQueryExpenses + addQuery);
         double sumIncome = getSumOfTransaction(mainQueryIncome + addQuery);
 
@@ -801,7 +638,6 @@ public class Controller implements Initializable {
         String year = String.valueOf(dateTemp.getYear());
         String month = String.valueOf(dateTemp.getMonth().getValue());
         String day = String.valueOf(dateTemp.getDayOfMonth());
-        //System.out.println("dateTemp = " + dateFormat.format(dateTemp));
 
         LocalDate startOfWeek = dateTemp, endOfWeek;
         while (startOfWeek.getDayOfWeek() != DayOfWeek.MONDAY) {
@@ -817,12 +653,7 @@ public class Controller implements Initializable {
                 queryNOTcur = " AND NOT (strftime('%Y', T.date) == '"+year+"' AND strftime('%m', T.date) == '"+month+"')";
             }
             case "Поточний тиждень" -> {
-                /*queryNOTcur = " AND NOT (strftime('%Y', T.date) == '"+startOfWeek.getYear()+"' AND strftime('%m', T.date) == '"+
-                        startOfWeek.getMonthValue()+"' AND strftime('%d', T.date) == '"+startOfWeek.getDayOfMonth()+"')";*/
                 queryNOTcur = " AND NOT (T.date BETWEEN '"+dateFormat.format(startOfWeek)+"' AND '"+dateFormat.format(endOfWeek)+"')";
-            }
-            case "Поточний день" -> {
-                queryNOTcur = " AND NOT (strftime('%Y', T.date) == '"+year+"' AND strftime('%m', T.date) == '"+month+"' AND strftime('%d', T.date) == '"+day+"')";
             }
         }
 
@@ -872,7 +703,7 @@ public class Controller implements Initializable {
 
             pb.setStyle("-fx-accent: "+color);
             Label nameLbl = new Label(shortForm+tempStr);
-            Label moneyLbl = new Label(String.format("%.2f", entry.getValue())   /*String.valueOf(entry.getValue())*/);
+            Label moneyLbl = new Label(String.format("%.2f", entry.getValue()));
             nameLbl.setFont(font); nameLbl.setTextFill(Color.WHITE);
             moneyLbl.setFont(font1); moneyLbl.setTextFill(Color.WHITE);
             grid.add(nameLbl, 0, 0);
@@ -915,7 +746,7 @@ public class Controller implements Initializable {
             }
             pb.setStyle("-fx-accent: " + color);
             nameLbl = new Label(accounts.get(y).getAccount_name() + tempStr);
-            moneyLbl = new Label(String.format("%.2f", balance) /*String.valueOf(/*accounts.get(y).getMoney()/*balance)*/);
+            moneyLbl = new Label(String.format("%.2f", balance));
 
             nameLbl.setFont(font); nameLbl.setTextFill(Color.WHITE);
             moneyLbl.setFont(font1); moneyLbl.setTextFill(Color.WHITE);
@@ -1226,24 +1057,6 @@ public class Controller implements Initializable {
 
         if(checkPoint) lbl.setText(formatPoint.format(amount));
         else lbl.setText(format.format(amount));
-
-        /*boolean checkPointF=amountFirst.getText().contains(".");;
-        boolean checkPointS=amountSecond.getText().contains(".");;
-
-        DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.US);
-        symbols.setGroupingSeparator(',');
-        symbols.setDecimalSeparator('.');
-        DecimalFormat format = new DecimalFormat("#,##0.###", symbols);
-        DecimalFormat formatPoint = new DecimalFormat("#,##0.000", symbols);
-        double amountF = Double.parseDouble(amountFirst.getText().replace(",", ""));
-        double amountS = Double.parseDouble(amountSecond.getText().replace(",", ""));
-
-        if(checkPointF) amountFirst.setText(formatPoint.format(amountF));
-        else amountFirst.setText(format.format(amountF));
-
-        if(checkPointS) amountSecond.setText(formatPoint.format(amountS));
-        else amountSecond.setText(format.format(amountS));*/
-
     }
     private void updateComboboxes() throws SQLException {
 
@@ -1345,7 +1158,6 @@ public class Controller implements Initializable {
         }
         else {
             if(!checkPoint) {
-                //System.out.println(lbl.getText().replace(",", "")+".000");
                 checkPoint = true;
                 lbl.setText(lbl.getText().replace(",", "") + ".000");
             }
