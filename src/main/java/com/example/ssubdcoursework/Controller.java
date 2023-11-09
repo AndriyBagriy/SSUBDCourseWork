@@ -192,7 +192,6 @@ public class Controller implements Initializable {
             try {
                 if(currencyLblFirstCheck)
                     updateExchangeRate();
-                //toFormatString();
                 toFormatStringFirst();
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -202,7 +201,6 @@ public class Controller implements Initializable {
             try {
                 if(!currencyLblFirstCheck)
                     updateExchangeRate();
-                //toFormatString();
                 toFormatStringSecond();
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -217,8 +215,6 @@ public class Controller implements Initializable {
         ResultSet dataSqLiteRS = dbHelperSLite.executeQuery("SELECT* FROM LastUpdate");
         while (dataPGRS.next()) dataPG = format.parse(dataPGRS.getString ("updatedate"));
         while (dataSqLiteRS.next()) dataSQLite = format.parse(dataSqLiteRS.getString ("updateDate"));
-        //System.out.println("dataPG" + dataPG);
-        //System.out.println("dataSQ" + dataSQLite);
         if(dataPG == null || dataSQLite ==null) {
             if (dataPG == null && dataSQLite == null) {
                 replaceSQLitetoPG();
@@ -519,7 +515,6 @@ public class Controller implements Initializable {
             String balanceQuery = "SELECT SUM(CASE WHEN C.type = 'input' THEN T.amount WHEN C.type = 'output' " +
                     "THEN -T.amount ELSE 0 END) AS balance FROM Transactions T JOIN Categories C on C._id = T.category_id " +
                     "WHERE T.account_id = "+account.get_id()+query;
-            //System.out.println(balanceQuery);
             double balance = 0.0;
 
             ResultSet balances = dbHelperSLite.executeQuery(balanceQuery);
@@ -533,8 +528,6 @@ public class Controller implements Initializable {
             }
             sumOfMoneyList.add(balance);
         }
-        //System.out.println("balances = " + sumOfMoneyList);
-
         return sumOfMoneyList;
     }
 
@@ -900,7 +893,6 @@ public class Controller implements Initializable {
                 @Override
                 public void handle(ActionEvent event) {
                     try {
-                        //System.out.println("idT = " + account.get_id());
                         dbHelperSLite.disconnect();
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("changeAccount.fxml"));
                         Parent root = loader.load();
@@ -915,7 +907,6 @@ public class Controller implements Initializable {
                                 dbHelperSLite.connect();
                                 fillAccountsList();
                                 initBarChart();
-                                //initAreaChart();
                                 fillProgressBars("");
                                 createProgressBars("");
                                 dbHelperSLite.disconnect();
@@ -987,7 +978,6 @@ public class Controller implements Initializable {
         dbHelperSLite.connect();
         fillAccountsList();
         initBarChart();
-        //initAreaChart();
         fillProgressBars("");
         createProgressBars("");
     }
@@ -998,7 +988,6 @@ public class Controller implements Initializable {
         symbols.setDecimalSeparator('.');
         DecimalFormat format = new DecimalFormat("#,##0.###", symbols);
         DecimalFormat formatPoint = new DecimalFormat("#,##0.000", symbols);
-        //System.out.println(amountFirst.getText());
         double amount = Double.parseDouble(amountFirst.getText().replace(",", ""));
         if(checkPointF) amountFirst.setText(formatPoint.format(amount));
         else amountFirst.setText(format.format(amount));
